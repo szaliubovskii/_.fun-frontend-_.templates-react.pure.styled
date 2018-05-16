@@ -11,13 +11,13 @@ import { ThemeProvider } from 'styled-components'
 import './app.css'
 
 import Navigation from './navigation'
-import theme, { themeDark } from './theme'
+import { themeDark, themeLight } from './theme'
 
 const { redirect } = configuration
 const App = () => (
   <Router>
     <ThemeProvider theme={themeDark}>
-      <Navigation>
+      <Navigation routes={routes}>
         <Fragment>
           <Switch>
             <Redirect exact from="/" to={redirect} />

@@ -5,7 +5,7 @@ import NavigationPanel from './panel'
 import NavigationContent from './content'
 
 const NavigationGrid = styled.div`
-  height: 100vh;
+  min-height: 100vh;
 
   display: grid;
   grid-template:
@@ -20,9 +20,9 @@ const NavigationGrid = styled.div`
   }
 `
 
-const Navigation = ({ children }) => (
+const Navigation = ({ routes, children }) => (
   <NavigationGrid>
-    <NavigationPanel>navigation</NavigationPanel>
+    <NavigationPanel routes={routes}>navigation</NavigationPanel>
     <NavigationContent>{children}</NavigationContent>
   </NavigationGrid>
 )
