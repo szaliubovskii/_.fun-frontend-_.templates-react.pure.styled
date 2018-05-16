@@ -5,18 +5,18 @@ import {
   Route,
   Redirect
 } from 'react-router-dom'
+import { configuration, routes } from './routing'
+import { ThemeProvider } from 'styled-components'
 
 import './app.css'
 
-import { configuration, routes } from './routing'
-
 import Navigation from './navigation'
+import theme, { themeDark } from './theme'
 
 const { redirect } = configuration
-
 const App = () => (
   <Router>
-    <Fragment>
+    <ThemeProvider theme={themeDark}>
       <Navigation>
         <Fragment>
           <Switch>
@@ -27,7 +27,7 @@ const App = () => (
           </Switch>
         </Fragment>
       </Navigation>
-    </Fragment>
+    </ThemeProvider>
   </Router>
 )
 

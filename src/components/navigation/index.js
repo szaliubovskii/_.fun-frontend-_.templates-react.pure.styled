@@ -1,12 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
+import ThemeProvider from 'styled-components'
 
 import NavigationPanel from './panel'
 import NavigationContent from './content'
-
-const theme = {
-  backgroundMain: '#444'
-}
 
 const NavigationGrid = styled.div`
   height: 100vh;
@@ -26,8 +23,8 @@ const NavigationGrid = styled.div`
 
 const Navigation = ({ children }) => (
   <NavigationGrid>
-    <NavigationPanel theme={theme}>navigation</NavigationPanel>
-    <NavigationContent theme={theme}>{children}</NavigationContent>
+    <NavigationPanel>navigation</NavigationPanel>
+    <NavigationContent>{children}</NavigationContent>
   </NavigationGrid>
 )
 
