@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import ThemeProvider from 'styled-components'
 
 import NavigationPanel from './panel'
 import NavigationContent from './content'
