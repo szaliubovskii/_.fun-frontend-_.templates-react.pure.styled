@@ -4,11 +4,13 @@ import thunk from 'redux-thunk'
 
 import * as reducers from './reducers'
 
-const middlewares = [thunk]
+const middlewares = []
 
 if (process.env.NODE_ENV === 'development') {
   middlewares.push(logger)
 }
+
+middlewares.push(thunk)
 
 const initialState = {}
 export const createNewStore = (state = initialState) =>
