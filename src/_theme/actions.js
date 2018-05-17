@@ -5,4 +5,4 @@ const changeThemeAction = value => ({
   value
 })
 
-export const changeTheme = (name, dispatch) => dispatch(changeThemeAction(name))
+export const changeTheme = name => dispatch => dispatch(changeThemeAction(name))
