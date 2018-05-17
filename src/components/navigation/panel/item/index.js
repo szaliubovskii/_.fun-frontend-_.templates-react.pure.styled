@@ -1,7 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
+import { lighten } from 'polished'
 
-const ItemBox = styled.div`
+const Box = styled.div`
   padding: 1rem;
   color: ${({ theme: { color } }) => color};
 
@@ -13,6 +14,7 @@ const ItemBox = styled.div`
 
   &:active {
     text-decoration: none;
+    color: ${({ theme: { accent } }) => lighten(0.2, accent)};
   }
 
   .active & {
@@ -20,6 +22,6 @@ const ItemBox = styled.div`
   }
 `
 
-const Item = ({ children }) => <ItemBox>{children}</ItemBox>
+const Item = ({ children }) => <Box>{children}</Box>
 
 export default Item
