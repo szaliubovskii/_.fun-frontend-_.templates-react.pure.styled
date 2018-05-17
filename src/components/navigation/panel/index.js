@@ -18,8 +18,10 @@ const Grid = styled.div`
   grid-auto-flow: column;
 
   grid-auto-flow: column;
-  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr) );
+  grid-template-columns: repeat(auto-fill, 1fr);
   grid-gap: 1rem;
+
+  text-align: center;
 
   ${mediaMin.medium`
     grid-auto-flow: row;
