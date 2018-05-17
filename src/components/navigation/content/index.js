@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import theme from '../../theme'
+import theme from '_theme'
 
 const NavigationContent = styled.div`
   grid-area: content;

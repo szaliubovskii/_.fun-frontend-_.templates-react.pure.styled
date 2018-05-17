@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { darken } from 'polished'
-import theme from '../../theme'
+import theme from '_theme'
 
 const NavigationPanel = styled.div`
   grid-area: panel;

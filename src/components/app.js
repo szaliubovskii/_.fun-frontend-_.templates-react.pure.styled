@@ -5,18 +5,19 @@ import {
   Route,
   Redirect
 } from 'react-router-dom'
+import { connect } from 'react-redux'
 import { configuration, routes } from './routing'
 import { ThemeProvider } from 'styled-components'
 
+import Navigation from './navigation'
+
 import './app.css'
 
-import Navigation from './navigation'
-import { themeDark, themeLight } from './theme'
-
 const { redirect } = configuration
-const App = () => (
+
+const App = ({ theme }) => (
   <Router>
-    <ThemeProvider theme={themeDark}>
+    <ThemeProvider theme={theme}>
       <Navigation routes={routes}>
         <Fragment>
           <Switch>
@@ -31,4 +32,6 @@ const App = () => (
   </Router>
 )
 
-export default App
+const mapStateToProps = ({ theme: { selected } }) => ({ theme: selected })
+
+export default connect(mapStateToProps)(App)
