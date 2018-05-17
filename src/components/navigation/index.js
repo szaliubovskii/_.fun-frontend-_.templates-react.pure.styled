@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { mediaMin } from '_styled'
 
 import NavigationPanel from './panel'
 import NavigationContent from './content'
@@ -14,10 +15,10 @@ const NavigationGrid = styled.div`
 
   grid-template-rows: 50px 1fr;
 
-  @media (min-width: 700px) {
+  ${mediaMin.medium`
     grid-template: 'panel content';
     grid-template-columns: 100px 1fr;
-  }
+  `};
 `
 
 const Navigation = ({ routes, children }) => (
