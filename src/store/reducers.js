@@ -1,1 +1,1 @@
-export { default as theme } from '_theme/reducer'
+export { default as theme } from 'theme/reducer'

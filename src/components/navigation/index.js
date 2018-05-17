@@ -1,11 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
-import { mediaMin } from '_styled'
+import { mediaMin } from 'styled'
 
-import NavigationPanel from './panel'
-import NavigationContent from './content'
+import Panel from './panel'
+import Content from './content'
 
-const NavigationGrid = styled.div`
+const Grid = styled.div`
   min-height: 100vh;
 
   display: grid;
@@ -19,13 +19,17 @@ const NavigationGrid = styled.div`
     grid-template: 'panel content';
     grid-template-columns: 100px 1fr;
   `};
+
+  ${Content} {
+    padding: 1rem 0 0 1rem;
+  }
 `
 
 const Navigation = ({ routes, children }) => (
-  <NavigationGrid>
-    <NavigationPanel routes={routes}>navigation</NavigationPanel>
-    <NavigationContent>{children}</NavigationContent>
-  </NavigationGrid>
+  <Grid>
+    <Panel routes={routes}>navigation</Panel>
+    <Content>{children}</Content>
+  </Grid>
 )
 
 export default Navigation

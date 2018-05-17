@@ -1,13 +1,15 @@
 export const themeDark = {
   name: 'dark',
   background: '#444',
-  color: '#fff'
+  color: '#fff',
+  accent: 'orange'
 }
 
 export const themeLight = {
   name: 'light',
   background: '#fff',
-  color: '#000'
+  color: '#000',
+  accent: 'orange'
 }
 
 export const list = [themeDark, themeLight]

@@ -1,7 +1,7 @@
 import styled from 'styled-components'
-import theme from '_theme'
+import theme from 'theme'
 
-const NavigationContent = styled.div`
+const Content = styled.div`
   grid-area: content;
 
   color: white;
@@ -9,8 +9,8 @@ const NavigationContent = styled.div`
   color: ${({ theme }) => theme.color};
 `
 
-NavigationContent.defaultProps = {
+Content.defaultProps = {
   theme
 }
 
-export default NavigationContent
+export default Content

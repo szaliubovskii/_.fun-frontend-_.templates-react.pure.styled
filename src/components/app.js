@@ -6,7 +6,7 @@ import {
   Redirect
 } from 'react-router-dom'
 import { connect } from 'react-redux'
-import { configuration, routes } from './routing'
+import { configuration, routes } from 'routing'
 import { ThemeProvider } from 'styled-components'
 
 import Navigation from './navigation'
