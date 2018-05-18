@@ -1,0 +1,1 @@
+export const API_DATA_LOADED = 'API_DATA_LOADED'
