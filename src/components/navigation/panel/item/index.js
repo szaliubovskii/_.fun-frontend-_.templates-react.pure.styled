@@ -13,7 +13,7 @@ const Item = styled.div`
 
   &:active {
     text-decoration: none;
-    color: ${({ theme: { accent } }) => lighten(0.2, accent)};
+    color: ${({ theme: { accent, lightenBy } }) => lighten(lightenBy, accent)};
   }
 
   .active & {

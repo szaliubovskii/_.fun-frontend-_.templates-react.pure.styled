@@ -20,7 +20,8 @@ export default styled.button`
   }
 
   &:active {
-    color: ${({ theme: { accent } }) => lighten(0.2, accent)};
-    border: 2px solid ${({ theme: { accent } }) => lighten(0.2, accent)};
+    color: ${({ theme: { accent, lightenBy } }) => lighten(lightenBy, accent)};
+    border: 2px solid
+      ${({ theme: { accent, lightenBy } }) => lighten(lightenBy, accent)};
   }
 `
