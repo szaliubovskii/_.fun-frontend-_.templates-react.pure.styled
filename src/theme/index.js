@@ -9,7 +9,7 @@ export const themeLight = {
   name: 'light',
   background: '#fff',
   color: '#000',
-  accent: '#ffa500'
+  accent: '#ff8000'
 }
 
 export const list = [themeDark, themeLight]
