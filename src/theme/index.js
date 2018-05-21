@@ -4,7 +4,12 @@ const defaultTheme = {
 
   background: '#fff',
   color: '#000',
-  accent: '#ff8000'
+
+  defaultColor: '#e8e8e8',
+  defaultCouple: '#000',
+
+  accentColor: '#4885ed',
+  accentCouple: '#fff'
 }
 
 export const themeDark = {
@@ -14,7 +19,9 @@ export const themeDark = {
 
   background: '#444',
   color: '#fff',
-  accent: '#ffa500'
+
+  accentColor: '#ffa500',
+  accentCouple: '#fff'
 }
 
 export const themeLight = {
@@ -23,6 +30,6 @@ export const themeLight = {
   name: 'light'
 }
 
-export const list = [themeDark, themeLight]
+export const list = [themeLight, themeDark]
 
 export default themeLight
