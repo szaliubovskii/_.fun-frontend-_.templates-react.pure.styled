@@ -6,6 +6,7 @@ import { changeTheme } from 'theme/actions'
 
 const Themer = ({ themes, changeThemeAction }) => (
   <div>
+    <h1>themes</h1>
     {themes.map(({ name }) => (
       <Button
         isAccent

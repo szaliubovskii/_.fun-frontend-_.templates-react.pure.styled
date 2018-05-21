@@ -10,7 +10,6 @@ const Box = styled.div`
 
 const Profile = () => (
   <Box>
-    <h1>profile</h1>
     <Themer />
   </Box>
 )

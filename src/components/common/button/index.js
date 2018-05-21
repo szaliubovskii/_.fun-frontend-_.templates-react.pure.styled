@@ -5,7 +5,7 @@ import { darken } from 'polished'
 export default styled.button`
   font-size: 1em;
   margin: 1em;
-  padding: 0.25em 1em;
+  padding: .5em 1em;
   border-radius: 3px;
 
   outline: none;
@@ -14,19 +14,16 @@ export default styled.button`
   ${({ isAccent, isHollow, isCircular, theme: { defaultColor, defaultCouple, accentColor, accentCouple } }) => {
 
     let backgroundColor = defaultColor
-    let borderColor = defaultColor
     let color = defaultCouple
     let borderRadius = '2px'
 
     if (isAccent) {
       backgroundColor = accentColor
-      borderColor = accentColor
       color = accentCouple
     }
 
     if (isHollow) {
       backgroundColor = 'rgba(0, 0, 0, 0.0)'
-      borderColor = 'rgba(0, 0, 0, 0.0)'
       color = isAccent ? accentColor : defaultCouple
     }
 
@@ -37,17 +34,15 @@ export default styled.button`
     return css`
       background: ${backgroundColor};
       color: ${color};
-      border: solid ${borderColor};
+      border-color: transparent;
       border-radius: ${borderRadius};
 
       &:hover {
         background-color: ${darken(0.03, backgroundColor)};
-        border-color: ${darken(0.03, backgroundColor)};
       }
 
       &:active {
         background-color: ${darken(0.05, backgroundColor)};
-        border-color: ${darken(0.05, backgroundColor)};
       }
     `
   }}
