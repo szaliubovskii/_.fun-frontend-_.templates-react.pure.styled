@@ -11,7 +11,11 @@ export default styled.button`
   outline: none;
   cursor: pointer;
   
-  ${({ isAccent, isHollow, isCircular, theme: { defaultColor, defaultCouple, accentColor, accentCouple } }) => {
+  ${({
+    isAccent,
+    isHollow,
+    isCircular, 
+    theme: { defaultColor, defaultCouple, accentColor, accentCouple } }) => {
 
     let backgroundColor = defaultColor
     let color = defaultCouple

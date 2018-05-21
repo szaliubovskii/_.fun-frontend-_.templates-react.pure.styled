@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import Item from './item'
+
 const Grid = styled.div`
   grid-area: list;
 
@@ -8,10 +10,7 @@ const Grid = styled.div`
 `
 
 const List = ({ list }) => (
-  <Grid>
-    {list.map(item => <div>item</div>)}
-    <div>list</div>
-  </Grid>
+  <Grid>{list.map(item => <Item key={item.id} item={item} />)}</Grid>
 )
 
 export default List
