@@ -1,24 +1,29 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { lighten } from 'polished'
 
+/* eslint-disable */
 const Item = styled.div`
   padding: 1rem;
-  color: ${({ theme: { color } }) => color};
 
-  text-decoration: none;
-
-  &:hover {
-    color: ${({ theme: { accent } }) => accent};
-  }
-
-  &:active {
+  ${({ theme: { color, accentColor, lightenBy } }) => css`
+    color: ${color};
     text-decoration: none;
-    color: ${({ theme: { accent, lightenBy } }) => lighten(lightenBy, accent)};
-  }
 
-  .active & {
-    color: ${({ theme: { accent } }) => accent};
-  }
+    &:hover {
+      color: ${accentColor};
+    }
+
+    &:active {
+      text-decoration: none;
+      color: ${lighten(lightenBy, accentColor)};
+    }
+
+    .active & {
+      font-size: 1.1em;
+      color: ${accentColor};
+    }
+  `}
 `
+/* eslint-enable */
 
 export default Item

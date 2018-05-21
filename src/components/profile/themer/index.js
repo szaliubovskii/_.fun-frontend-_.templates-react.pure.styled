@@ -6,8 +6,14 @@ import { changeTheme } from 'theme/actions'
 
 const Themer = ({ themes, changeThemeAction }) => (
   <div>
+    <h1>themes</h1>
     {themes.map(({ name }) => (
-      <Button key={name} onClick={() => changeThemeAction(name)}>
+      <Button
+        isAccent
+        isCircular
+        key={name}
+        onClick={() => changeThemeAction(name)}
+      >
         {name}
       </Button>
     ))}
