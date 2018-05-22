@@ -1,3 +1,4 @@
+import { combineEpics } from 'redux-observable'
 import { ofType } from 'redux-observable'
 import { delay, mapTo } from 'rxjs/operators'
 
@@ -10,7 +11,4 @@ const searchEpic = action =>
     mapTo({ type: PHONEBOOK_LIST_UPDATE, value: [] })
   )
 
-export default action => {
-  console.log(action)
-  return searchEpic(action)
-}
+export default combineEpics(searchEpic)
