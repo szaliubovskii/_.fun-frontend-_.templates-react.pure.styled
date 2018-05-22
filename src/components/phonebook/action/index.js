@@ -10,9 +10,11 @@ const Box = styled.div`
   grid-auto-flow: column;
 `
 
-const Action = () => (
+const Action = ({ clearSearchAction }) => (
   <Box>
-    <Button isCircular>Clear</Button>
+    <Button isCircular onClick={clearSearchAction}>
+      Clear
+    </Button>
     <Button isCircular isAccent>
       Add
     </Button>

@@ -1,4 +1,4 @@
-import { PHONEBOOK_LIST_UPDATE } from './constants'
+import { PHONEBOOK_LIST_UPDATE, PHONEBOOK_SEARCH_CHANGE } from './constants'
 
 const initialState = {
   list: [],
@@ -11,6 +11,11 @@ export default (state = initialState, action) => {
       return {
         ...state,
         list: action.value
+      }
+    case PHONEBOOK_SEARCH_CHANGE:
+      return {
+        ...state,
+        search: action.value
       }
     default:
       return state
