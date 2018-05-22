@@ -11,8 +11,6 @@ import { ThemeProvider } from 'styled-components'
 
 import Navigation from './navigation'
 
-import './app.css'
-
 const { redirect } = configuration
 
 const App = ({ theme }) => (

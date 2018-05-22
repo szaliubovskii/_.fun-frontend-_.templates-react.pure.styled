@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components'
+import { transparentize } from 'polished'
 
 /* eslint-disable */
 export default styled.input`
@@ -8,15 +9,19 @@ export default styled.input`
   padding: 0.5rem 0.5rem;
   border-radius: 3px;
 
-  ${({ isStretch,  theme: { defaultColor, defaultCouple, accentColor } }) => css`
+  ${({ isStretch,  theme: { color, accentColor } }) => css`
     background-color: transparent;
-    color: ${defaultColor};
-    border: 1px solid ${defaultColor};
+    color: ${color};
+    border: 1px solid ${transparentize(0.7, color)};
 
-    ${() => { if (isStretch) return css`width: 100%;`}}
+    ${() => { if (isStretch) return css`width: 98%;`}}
 
     &:active, &:focus {
       border-color: ${accentColor};
+    }
+
+    &::placeholder {
+      color: ${transparentize(0.7, color)};
     }
   `}
 
