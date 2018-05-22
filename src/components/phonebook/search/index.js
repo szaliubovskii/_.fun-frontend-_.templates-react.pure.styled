@@ -6,9 +6,7 @@ const Box = styled.div`
   grid-area: search;
 `
 
-const handleChange = action => ({ target: { value } }) => {
-  action(value)
-}
+const handleChange = action => ({ target: { value } }) => action(value)
 
 const Search = ({ search, searchAction }) => (
   <Box>
