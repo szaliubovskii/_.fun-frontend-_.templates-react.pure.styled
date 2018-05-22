@@ -17,12 +17,13 @@ export default styled.button`
     isCircular, 
     theme: { defaultColor, defaultCouple, accentColor, accentCouple } }) => {
 
-    let backgroundColor = defaultColor
-    let color = defaultCouple
-    let borderRadius = '2px'
+    let backgroundColor = defaultColor, 
+        borderColor = defaultColor,
+        color = defaultCouple,
+        borderRadius = '2px'
 
     if (isAccent) {
-      backgroundColor = accentColor
+      backgroundColor = borderColor = accentColor
       color = accentCouple
     }
 
@@ -38,14 +39,16 @@ export default styled.button`
     return css`
       background: ${backgroundColor};
       color: ${color};
-      border-color: transparent;
+      border-color: ${borderColor};
       border-radius: ${borderRadius};
 
       &:hover {
+        border-color: ${darken(0.03, borderColor)};
         background-color: ${darken(0.03, backgroundColor)};
       }
 
       &:active {
+        border-color: ${darken(0.05, borderColor)};
         background-color: ${darken(0.05, backgroundColor)};
       }
     `

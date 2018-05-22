@@ -11,6 +11,7 @@ const Themer = ({ themes, changeThemeAction }) => (
       <Button
         isAccent
         isCircular
+        isHollow
         key={name}
         onClick={() => changeThemeAction(name)}
       >

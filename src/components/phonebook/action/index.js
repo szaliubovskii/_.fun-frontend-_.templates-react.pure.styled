@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { FaClose, FaPlus } from 'react-icons/lib/fa'
 
 import { Button } from 'components/common'
 
@@ -13,10 +14,10 @@ const Box = styled.div`
 const Action = ({ clearSearchAction }) => (
   <Box>
     <Button isCircular onClick={clearSearchAction}>
-      Clear
+      <FaClose />
     </Button>
     <Button isCircular isAccent>
-      Add
+      <FaPlus /> Add
     </Button>
   </Box>
 )

@@ -1,5 +1,4 @@
-import { combineEpics } from 'redux-observable'
-import { ofType } from 'redux-observable'
+import { combineEpics, ofType } from 'redux-observable'
 import { delay, mapTo } from 'rxjs/operators'
 
 import { PHONEBOOK_SEARCH_CHANGE, PHONEBOOK_LIST_UPDATE } from './constants'
