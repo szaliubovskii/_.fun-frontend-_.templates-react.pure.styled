@@ -1,4 +1,4 @@
-# Otravo challenge
+# Challenge
 
 ## Setup
 
