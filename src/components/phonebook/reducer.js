@@ -4,7 +4,7 @@ import {
   PHONEBOOK_LOADING
 } from './constants'
 
-const initialState = {
+export const initialState = {
   list: [],
   loading: false,
   search: ''
