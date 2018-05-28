@@ -1,21 +1,31 @@
-import { PHONEBOOK_LIST_UPDATE, PHONEBOOK_SEARCH_CHANGE } from './constants'
+import {
+  PHONEBOOK_LIST_UPDATE,
+  PHONEBOOK_SEARCH_CHANGE,
+  PHONEBOOK_LOADING
+} from './constants'
 
 const initialState = {
   list: [],
+  loading: false,
   search: ''
 }
 
-export default (state = initialState, action) => {
-  switch (action.type) {
+export default (state = initialState, { type, value }) => {
+  switch (type) {
     case PHONEBOOK_LIST_UPDATE:
       return {
         ...state,
-        list: action.value
+        list: value
       }
     case PHONEBOOK_SEARCH_CHANGE:
       return {
         ...state,
-        search: action.value
+        search: value
+      }
+    case PHONEBOOK_LOADING:
+      return {
+        ...state,
+        loading: value
       }
     default:
       return state

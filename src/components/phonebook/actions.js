@@ -1,7 +1,17 @@
-import { PHONEBOOK_SEARCH_CHANGE } from './constants'
+import * as types from './constants'
 
-const search = value => ({
-  type: PHONEBOOK_SEARCH_CHANGE,
+export const search = value => ({
+  type: types.PHONEBOOK_SEARCH_CHANGE,
+  value
+})
+
+export const listLoading = value => ({
+  type: types.PHONEBOOK_LOADING,
+  value
+})
+
+export const listUpdate = value => ({
+  type: types.PHONEBOOK_LIST_UPDATE,
   value
 })
 

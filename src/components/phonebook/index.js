@@ -23,19 +23,26 @@ const Grid = styled.div`
   `};
 `
 
-const Phonebook = ({ list, search, searchAction, clearSearchAction }) => (
+const Phonebook = ({
+  list,
+  search,
+  searchAction,
+  clearSearchAction,
+  loading
+}) => (
   <Grid>
     <Search search={search} searchAction={searchAction} />
 
     <Action clearSearchAction={clearSearchAction} />
 
-    <List list={list} />
+    <List list={list} loading={loading} />
   </Grid>
 )
 
-const mapStateToProps = ({ phonebook: { list, search } }) => ({
+const mapStateToProps = ({ phonebook: { list, search, loading } }) => ({
   list,
-  search
+  search,
+  loading
 })
 const mapDispatchToProps = dispatch => ({
   searchAction: searchAction(dispatch),
