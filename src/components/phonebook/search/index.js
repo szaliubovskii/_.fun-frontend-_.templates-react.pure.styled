@@ -1,10 +1,8 @@
 import React from 'react'
-import styled from 'styled-components'
-import { Input } from 'components/common'
+import PropTypes from 'prop-types'
 
-const Box = styled.div`
-  grid-area: search;
-`
+import { Box } from './containers'
+import { Input } from 'components/common'
 
 const handleChange = action => ({ target: { value } }) => action(value)
 
@@ -18,5 +16,12 @@ const Search = ({ search, searchAction }) => (
     />
   </Box>
 )
+
+export const SearchPropTypes = {
+  search: PropTypes.string,
+  searchAction: PropTypes.func.isRequired
+}
+
+Search.propTypes = SearchPropTypes
 
 export default Search

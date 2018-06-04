@@ -1,15 +1,10 @@
 import React from 'react'
-import styled from 'styled-components'
+import PropTypes from 'prop-types'
 import { FaClose, FaPlus } from 'react-icons/lib/fa'
 
 import { Button } from 'components/common'
 
-const Box = styled.div`
-  grid-area: action;
-
-  display: grid;
-  grid-auto-flow: column;
-`
+import { Box } from './containers'
 
 const Action = ({ clearSearchAction }) => (
   <Box>
@@ -21,5 +16,11 @@ const Action = ({ clearSearchAction }) => (
     </Button>
   </Box>
 )
+
+export const ActionPropTypes = {
+  clearSearchAction: PropTypes.func.isRequired
+}
+
+Action.propTypes = ActionPropTypes
 
 export default Action
