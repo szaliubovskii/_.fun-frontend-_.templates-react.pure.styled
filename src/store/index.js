@@ -3,8 +3,6 @@ import { createEpicMiddleware } from 'redux-observable'
 import logger from 'redux-logger'
 import thunk from 'redux-thunk'
 
-import start from './start'
-
 import { fakeAjaxGet } from './fake.api'
 
 import * as reducers from './reducers'
@@ -20,14 +18,5 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 const initialState = {}
-export const createNewStore = (state = initialState) => {
-  const store = createStore(
-    combineReducers(reducers),
-    state,
-    applyMiddleware(...middlewares)
-  )
-
-  start(store)
-
-  return store
-}
+export const createNewStore = (state = initialState) =>
+  createStore(combineReducers(reducers), state, applyMiddleware(...middlewares))

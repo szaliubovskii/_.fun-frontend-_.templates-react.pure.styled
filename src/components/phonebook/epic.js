@@ -2,10 +2,17 @@ import { combineEpics, ofType } from 'redux-observable'
 import { delay, mapTo, mergeMap } from 'rxjs/operators'
 import 'rxjs/add/operator/map'
 
-import { PHONEBOOK_SEARCH_CHANGE, PHONEBOOK_LIST_UPDATE } from './constants'
-import { listLoading, listUpdate } from './actions'
+import {
+  PHONEBOOK_FIRST_LOAD,
+  PHONEBOOK_SEARCH_CHANGE,
+  PHONEBOOK_LIST_UPDATE
+} from './constants'
+import { search, listLoading, listUpdate } from './actions'
 
 // when filter changed, show that list is loading
+export const firstLoad = action =>
+  action.pipe(ofType(PHONEBOOK_FIRST_LOAD), mapTo(search('')))
+
 export const filterLoadingStart = action =>
   action.pipe(ofType(PHONEBOOK_SEARCH_CHANGE), mapTo(listLoading(true)))
 
@@ -23,4 +30,9 @@ export const filterChange = (action, _, { get }) =>
     )
   )
 
-export default combineEpics(filterLoadingStart, filterLoadingStop, filterChange)
+export default combineEpics(
+  firstLoad,
+  filterLoadingStart,
+  filterLoadingStop,
+  filterChange
+)

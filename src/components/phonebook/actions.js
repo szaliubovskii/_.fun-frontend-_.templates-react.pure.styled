@@ -1,19 +1,31 @@
-import * as types from './constants'
+import {
+  PHONEBOOK_FIRST_LOAD,
+  PHONEBOOK_SEARCH_CHANGE,
+  PHONEBOOK_LOADING,
+  PHONEBOOK_LIST_UPDATE
+} from './constants'
+
+export const firstLoad = () => ({
+  type: PHONEBOOK_FIRST_LOAD,
+  value: false
+})
 
 export const search = value => ({
-  type: types.PHONEBOOK_SEARCH_CHANGE,
+  type: PHONEBOOK_SEARCH_CHANGE,
   value
 })
 
 export const listLoading = value => ({
-  type: types.PHONEBOOK_LOADING,
+  type: PHONEBOOK_LOADING,
   value
 })
 
 export const listUpdate = value => ({
-  type: types.PHONEBOOK_LIST_UPDATE,
+  type: PHONEBOOK_LIST_UPDATE,
   value
 })
+
+export const firstLoadAction = dispatch => () => dispatch(firstLoad())
 
 export const searchAction = dispatch => value => dispatch(search(value))
 
