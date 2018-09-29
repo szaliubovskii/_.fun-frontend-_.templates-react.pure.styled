@@ -1,6 +1,6 @@
-import { THEME_CHANGE } from './constants'
+import { list } from 'theme'
 
-import { list } from './index'
+import { THEME_CHANGE } from './constants'
 
 const initialState = {
   list,

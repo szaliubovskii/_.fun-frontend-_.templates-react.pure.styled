@@ -2,12 +2,12 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { Button } from 'app/common'
 
-import { changeTheme } from 'theme/actions'
+import { changeTheme } from './actions'
 
-const Themer = ({ themes, changeThemeAction }) => (
+const Theme = ({ list, changeThemeAction }) => (
   <div>
     <h1>themes</h1>
-    {themes.map(({ name }) => (
+    {list.map(({ name }) => (
       <Button
         isAccent
         isCircular
@@ -22,11 +22,11 @@ const Themer = ({ themes, changeThemeAction }) => (
 )
 
 const mapsStateToProps = ({ theme: { list } }) => ({
-  themes: list
+  list
 })
 
 const mapDispatchToProps = dispatch => ({
   changeThemeAction: name => dispatch(changeTheme(name))
 })
 
-export default connect(mapsStateToProps, mapDispatchToProps)(Themer)
+export default connect(mapsStateToProps, mapDispatchToProps)(Theme)

@@ -1,11 +1,11 @@
 import React from 'react'
 
 import { Box } from './containers'
-import Themer from './themer'
+import Theme from './theme'
 
 const Profile = () => (
   <Box>
-    <Themer />
+    <Theme />
   </Box>
 )
 
