@@ -1,5 +1,5 @@
-import Phonebook from 'components/phonebook'
-import Profile from 'components/profile'
+import Phonebook from './phonebook'
+import Profile from './profile'
 
 export const configuration = {
   redirect: '/phonebook'

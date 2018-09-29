@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import { Box } from './containers'
-import { Input } from 'components/common'
+import { Input } from 'app/common'
 
 const handleChange = action => ({ target: { value } }) => action(value)
 

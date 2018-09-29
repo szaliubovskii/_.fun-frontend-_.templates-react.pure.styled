@@ -6,7 +6,7 @@ import thunk from 'redux-thunk'
 import { fakeAjaxGet } from './fake.api'
 
 import * as reducers from './reducers'
-import epics from './epics'
+import epics from 'app/epics'
 
 const epicMiddleware = createEpicMiddleware(epics, {
   dependencies: { get: fakeAjaxGet }

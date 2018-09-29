@@ -1,11 +1,13 @@
 import React from 'react'
 
-import { Block } from 'components/common/loading'
-import { Grid, Image, Header, Description } from './containers'
+import { Block } from 'app/common/loading'
+import { Grid, Image, Header, Description, DummyImage } from './containers'
 
 export default () => (
   <Grid>
-    <Image />
+    <Image>
+      <DummyImage />
+    </Image>
     <Header>
       <Block isHalfSize />
     </Header>

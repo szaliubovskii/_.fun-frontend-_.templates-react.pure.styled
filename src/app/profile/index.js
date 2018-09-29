@@ -1,12 +1,7 @@
 import React from 'react'
-import styled from 'styled-components'
 
+import { Box } from './containers'
 import Themer from './themer'
-
-const Box = styled.div`
-  display: flex;
-  flex-flow: column;
-`
 
 const Profile = () => (
   <Box>

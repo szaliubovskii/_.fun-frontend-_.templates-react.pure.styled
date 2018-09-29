@@ -5,9 +5,9 @@ import {
   PHONEBOOK_LIST_UPDATE
 } from './constants'
 
-export const firstLoad = () => ({
+export const firstLoad = value => ({
   type: PHONEBOOK_FIRST_LOAD,
-  value: false
+  value
 })
 
 export const search = value => ({
@@ -25,8 +25,9 @@ export const listUpdate = value => ({
   value
 })
 
-export const firstLoadAction = dispatch => () => dispatch(firstLoad())
+export const firstLoadAction = dispatch => (value = true) =>
+  dispatch(firstLoad(value))
 
-export const searchAction = dispatch => value => dispatch(search(value))
+export const searchAction = dispatch => (value = '') => dispatch(search(value))
 
 export const clearSearchAction = dispatch => () => dispatch(search(''))

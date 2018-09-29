@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { FaClose, FaPlus } from 'react-icons/lib/fa'
 
-import { Button } from 'components/common'
+import { Button } from 'app/common'
 
 import { Box } from './containers'
 

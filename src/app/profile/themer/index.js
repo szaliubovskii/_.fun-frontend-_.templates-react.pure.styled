@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { Button } from 'components/common'
+import { Button } from 'app/common'
 
 import { changeTheme } from 'theme/actions'
 

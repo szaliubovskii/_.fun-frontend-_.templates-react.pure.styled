@@ -5,7 +5,7 @@ import { Provider } from 'react-redux'
 import 'normalize.css'
 import './index.css'
 
-import App from './components/app'
+import App from './app'
 import { createNewStore } from './store'
 import registerServiceWorker from './registerServiceWorker'
 
